@@ -3,7 +3,8 @@
   "scripts": {
     "build:html": "jade -P ./source/jade/index.jade -o ./public",
     "build:css": "stylus -m ./source/styl/index.styl -o ./public",
-    "build:js": "browserify ./source/js/app.jsx -o ./public/build.js -t [ babelify --presets [ es2015 react ] ]"
+    "build:js": "browserify ./source/js/app.jsx -o ./public/build.js -t [ babelify --presets [ es2015 react ] ]",
+    "start" : "npm run build:html & npm run build:css & npm run build:js"
   },
   "dependencies": {
     "babelify": "^7.2.0",
