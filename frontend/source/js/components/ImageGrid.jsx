@@ -2,21 +2,12 @@
  * Modules dependencies
  */
 
- import React from 'react';
- import Reflux from 'reflux';
- import ImageStore from '../stores/ImageStore';
+import React from 'react';
+import Reflux from 'reflux';
+import ImageStore from '../stores/ImageStore';
+import ImageGridItem from './ImageGridItem.jsx';
 
- let ImageGridItem = React.createClass({
-  render: function() {
-    return <div className="image">
-      <a href={this.props.image.link}>
-        <img src={this.props.image.media.m} />
-      </a>
-    </div>
-  }
-});
-
- let ImageGrid = React.createClass({
+let ImageGrid = React.createClass({
    mixins : [Reflux.connect(ImageStore, 'imagestore')],
 
    render : function () {
